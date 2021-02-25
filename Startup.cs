@@ -18,11 +18,23 @@ namespace Tandm
             Configuration = configuration;
         }
 
+        readonly string AllowAllPolicy = "_allowAllPolicy";
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            // For testing only, needs to be secured
+            services.AddCors(options =>
+            {
+                options.AddPolicy(AllowAllPolicy,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
             services.AddControllersWithViews();
             // configure strongly typed settings object
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
@@ -48,6 +60,7 @@ namespace Tandm
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors(AllowAllPolicy);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

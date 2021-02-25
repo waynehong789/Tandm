@@ -1,0 +1,24 @@
+<div class="content" >
+  <h1>Login to Tandm</h1>
+  <p>Welcome to Tandm single-page application, built with:</p>
+  <ul class="description">
+    <li><a href='https://get.asp.net/'>.NET 5</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
+    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
+    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
+  </ul>
+
+  <div class="flex-column w-100">
+    <div class="d-flex justify-content-between flex-row col-8">
+      <label class="mr-3">User Name:</label>
+      <input type="text" #username>
+    </div>
+    <div class="d-flex justify-content-between flex-row col-8 mt-2">
+      <label class="mr-3">Password:</label>
+      <input type="text" #password>
+    </div>
+    <div class="mt-5">
+      <button (click)="login(username.value, password.value)">Login</button>
+    </div>
+  </div>
+</div>
+
