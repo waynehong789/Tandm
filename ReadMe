@@ -12,7 +12,7 @@ Installation and Run project:
 
 1. Run command: docker build -t tandm .
 2. Run command: docker run -d -p 5000:80 tandm
-3. Open web browser to: http://localhost:4200
+3. Open web browser to: http://localhost:5000
 4. Shows Login page by default. 
 5. Input any value at "user name" and "Password", then click "Login". It will send Anuthenticate request to backend and return access token. Token will be saved into NGRX store.
 6. UI will be navigated to Calculator page automatically.
