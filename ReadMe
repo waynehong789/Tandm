@@ -1,0 +1,27 @@
+Tandm 
+
+This is a samply project of a simple online calculator.
+
+This project consist of .Net5 backend & Angular frontend, with Docker.
+
+1.Backend - REST API, FluentValidation & JWT authentication
+
+2.Frontend - NGRX store 
+
+Installation and Run project:
+
+1. Run command: docker build -t tandm .
+2. Run command: docker run -d -p 5000:80 tandm
+3. Open web browser to: http://localhost:4200
+4. Shows Login page by default. 
+5. Input any value at "user name" and "Password", then click "Login". It will send Anuthenticate request to backend and return access token. Token will be saved into NGRX store.
+6. UI will be navigated to Calculator page automatically.
+7. Calculator will insert user token as request header for getting calculation result.
+8. Once user click "LogOut", user token will be cleaned, and UI will be navigated to login page.
+
+Improvement can be:
+
+1. Add unit test at Angular & .Net5
+2. Use AWS Cognito, API Getaway and Lambda for user authentication & authorization
+3. Add database
+4. Use Bitbucket & Kubernetes for project deployment
