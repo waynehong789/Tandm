@@ -4,9 +4,9 @@ This is a samply project of a simple online calculator.
 
 This project consist of .Net5 backend & Angular frontend, with Docker.
 
-1.Backend - REST API, FluentValidation & JWT authentication
-
-2.Frontend - NGRX store 
+1. Best practice for web application -- It consists of Angular (front end) and .Net 5 (latest .Net back end with Restful API). 
+2. Advanced management and security design -- Implementing NGRX (advanced state/memory management for Angular) and JWT authentication.
+3. Deployment ready -- This project has been set up and can be run in a Docker container.
 
 Installation and Run project:
 
